@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : test
+Version: P-2019.03-SP2
+Date   : Mon Nov  9 19:26:18 2020
+****************************************
+
+Operating Conditions: nom_pvt   Library: lsi_10k
+Wire Load Model Mode: top
+
+  Startpoint: b (input port clocked by clk)
+  Endpoint: op (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  test               10x10                 lsi_10k
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.30       0.30
+  input external delay                     2.00       2.30 r
+  b (in)                                   0.00       2.30 r
+  U12/Z (AN2)                              0.57       2.87 r
+  op (out)                                 0.00       2.87 r
+  data arrival time                                   2.87
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.30       0.30
+  clock uncertainty                        0.50       0.80
+  output external delay                   -1.65      -0.85
+  data required time                                 -0.85
+  -----------------------------------------------------------
+  data required time                                 -0.85
+  data arrival time                                  -2.87
+  -----------------------------------------------------------
+  slack (MET)                                         3.72
+
+
+1

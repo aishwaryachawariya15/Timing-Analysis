@@ -1,0 +1,7 @@
+set designer "Aishwarya Chawariya"
+set company "CSUS"
+set search_path "/usr/pkg/syn/libraries/syn ./source ./scripts"
+set link_library "lsi_10k.db"
+set target_library "lsi_10k.db"
+set symbol_library "lsi_10k.sdb"
+define_design_lib WORK -path ./work
